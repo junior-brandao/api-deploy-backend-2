@@ -12,7 +12,7 @@ const knex = require('./conexao')
 app.get('/', async (req, res) => {
 
    try {
-      const retorno = await knex('familia')
+      const retorno = await knex('familia').debug()
       return res.json(retorno)
    } catch (error) {
       console.log(error)
