@@ -9,10 +9,11 @@ const app = express()
 
 app.use(express.json())
 
-const familia = ['Junior', 'Keylla', 'Gabriel', 'Rute', 'Tell']
+const knex = require('./conexao')
 
-app.get('/', (req, res) => {
-   return res.json(familia)
+app.get('/', async (req, res) => {
+   const retorno = await knex('familia')
+   return res.json(retorno)
 })
 
 const PORT = process.env.PORT || 3000
