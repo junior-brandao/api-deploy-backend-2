@@ -16,7 +16,7 @@ app.get('/', async (req, res) => {
       return res.json(retorno)
    } catch (error) {
       console.log(error)
-      return res.status(500).json('Erro interno')
+      return res.status(500).json('Erro interno.')
    }
 })
 
