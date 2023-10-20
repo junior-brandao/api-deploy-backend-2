@@ -17,7 +17,8 @@ app.get('/', async (req, res) => {
       const retorno = await knex('familia')
       return res.json(retorno)
    } catch (error) {
-      return res.status(500).json(error)
+      console.log(error)
+      return res.status(500).json('Erro interno')
    }
 })
 
