@@ -9,6 +9,6 @@ const knex = require('knex')({
       password: '7ace02179fd0ee0177481095c3f1b69f598fe96ac23ab35fa43f062283a7be51',
       database: 'dde9uno9tbq4ga',
    },
-
+   ssl: { rejectUnauthorized: false },
 })
-module.exports = knex
+
