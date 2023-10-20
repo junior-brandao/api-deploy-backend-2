@@ -9,7 +9,7 @@ const app = express()
 
 app.use(express.json())
 
-const familia = ['Junior', 'Keylla', 'Gabriel', 'Rute']
+const familia = ['Junior', 'Keylla', 'Gabriel', 'Rute', 'Tell']
 
 app.get('/', (req, res) => {
    return res.json(familia)
