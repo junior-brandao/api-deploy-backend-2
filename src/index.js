@@ -1,21 +1,22 @@
 
 const express = require('express')
 
-require('dotenv').config()
+require('dotenv').config({
+   path: './.env',
+})
 
 const app = express()
 
 app.use(express.json())
 
-const conexao = require('./conexao')
+const knex = require('./conexao')
 
 app.get('/', async (req, res) => {
 
    try {
-      //  const retorno = await conexao.query('familia').debug()
-      return res.json('Junior brandao')
+      const retorno = await knex('familia')
+      return res.json(retorno)
    } catch (error) {
-      console.log(error)
       return res.status(500).json('Erro interno')
    }
 })
