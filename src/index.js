@@ -9,9 +9,10 @@ const app = express()
 
 app.use(express.json())
 
+const familia = ['Junior', 'Keylla', 'Gabriel', 'Rute']
 
 app.get('/', (req, res) => {
-   return res.json("API HEROKU CLI")
+   return res.json(familia)
 })
 
 const PORT = process.env.PORT || 3000
