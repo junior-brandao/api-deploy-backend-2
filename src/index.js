@@ -7,16 +7,16 @@ const app = express()
 
 app.use(express.json())
 
-const knex = require('./conexao')
+const conexao = require('./conexao')
 
 app.get('/', async (req, res) => {
 
    try {
-      const retorno = await knex('familia').debug()
+      const retorno = await conexao.query('familia').debug()
       return res.json(retorno)
    } catch (error) {
       console.log(error)
-      return res.status(500).json(process.env.DATABASE_URL)
+      return res.status(500).json('Erro interno')
    }
 })
 

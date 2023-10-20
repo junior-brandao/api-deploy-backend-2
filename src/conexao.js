@@ -12,4 +12,8 @@ const knex = require('knex')({
    ssl: { rejectUnauthorized: false },
 })
 
-module.exports = knex
+const query = (text) => {
+   return knex(text);
+}
+
+module.exports = { query }
