@@ -12,8 +12,8 @@ const conexao = require('./conexao')
 app.get('/', async (req, res) => {
 
    try {
-      const retorno = await conexao.query('familia').debug()
-      return res.json(retorno)
+      //  const retorno = await conexao.query('familia').debug()
+      return res.json('Junior brandao')
    } catch (error) {
       console.log(error)
       return res.status(500).json('Erro interno')
