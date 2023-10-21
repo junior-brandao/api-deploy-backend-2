@@ -1,3 +1,5 @@
 Projeto feito com deploy via heroku cli
 
 https://devcenter.heroku.com/articles/deploying-nodejs
+
+Banco de dados ElephanteSQL

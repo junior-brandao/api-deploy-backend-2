@@ -10,7 +10,7 @@ const app = express()
 
 app.use(cors())
 //app.use(cors({
-//   origin:'https://globo.com.br'
+//   origin:['https://globo.com.br','https://r7.com.br']
 //}))
 app.use(express.json())
 
