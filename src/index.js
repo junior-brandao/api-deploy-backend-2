@@ -8,7 +8,10 @@ require('dotenv').config({
 
 const app = express()
 
-app.use(cors)
+app.use(cors())
+//app.use(cors({
+//   origin:'https://globo.com.br'
+//}))
 app.use(express.json())
 
 const knex = require('./conexao')
